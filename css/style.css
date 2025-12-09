@@ -6,14 +6,12 @@ body {
     font: 20px sans-serif;
 }
 
-/* Header - ใช้ Flexbox สำหรับจัดตำแหน่ง */
 header {
     padding: 10px 0px;
     font-size: 1.5em;
     text-align: center;
 }
 
-/* Navigation - ใช้ Flexbox สำหรับเมนูแนวนอน */
 .menu {
     padding: 0px 10px;
 }
@@ -98,7 +96,6 @@ footer {
     background-color: #388bff;
 }
 
-/* Responsive Design - Mobile (เฉพาะ Header และ Nav) */
 @media (max-width: 768px) {
     body {
         width: 100%;
