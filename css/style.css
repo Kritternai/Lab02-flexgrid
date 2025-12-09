@@ -91,6 +91,31 @@ img {
     box-shadow: 10px 10px 5px #888888;
 }
 
+/* Planet Cards Section using Flexbox and CSS Grid */
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+aside p {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    flex: 0 1 calc(33.333% - 20px);
+    padding: 20px;
+    border: 2px solid #FFF;
+    border-radius: 15px;
+    background-color: #1a1a1a;
+    box-shadow: 8px 8px 4px #555555;
+    min-height: 150px;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
 footer {
     text-align: center;
     background-color: #388bff;
@@ -111,5 +136,13 @@ footer {
         flex-direction: column;
         gap: 10px;
         align-items: center;
+    }
+
+    aside {
+        flex-direction: column;
+    }
+
+    aside p {
+        flex: 1 1 100%;
     }
 }
