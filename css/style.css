@@ -6,26 +6,45 @@ body {
     font: 20px sans-serif;
 }
 
+/* Header และ Nav Container - ใช้ Flexbox สำหรับจัด layout แนวตั้ง */
 header {
-    padding: 10px 0px;
+    padding: 15px 0px;
     font-size: 1.5em;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu {
-    padding: 0px 10px;
+nav {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
     list-style: none;
 }
 
+/* Navigation Menu - ใช้ CSS Grid สำหรับจัดเมนูเป็นคอลัมน์ */
 nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
     padding: 0;
-    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    padding: 8px 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.menu:hover {
+    background-color: rgba(250, 162, 2, 0.2);
+    border-radius: 5px;
 }
 
 a {
@@ -96,20 +115,33 @@ footer {
     background-color: #388bff;
 }
 
+/* Responsive Design - Mobile */
 @media (max-width: 768px) {
     body {
         width: 100%;
         max-width: 100%;
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     header {
         font-size: 1.2em;
+        padding: 12px 0px;
     }
 
+    nav {
+        padding: 8px 0px;
+    }
+
+    /* เปลี่ยน Grid เป็น 1 คอลัมน์บน mobile */
     nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .menu {
+        text-align: center;
+        padding: 10px 15px;
     }
 }
